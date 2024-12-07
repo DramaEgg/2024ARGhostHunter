@@ -44,12 +44,13 @@ public class Shooting : MonoBehaviour
 
         if ((OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) && CurrentTalisman > 0 && !IsLoading)
         {
+            Debug.Log("Button down");
             if (Physics.Raycast(TalismanRay, out hitInfo, 100.0f))
             {
                 hitPosition = hitInfo.point;
                 TalismanRotation = (hitPosition - _spawnRoot.position).normalized;
                 Instantiate(TalismanPrefab, _spawnRoot.position, Quaternion.LookRotation(TalismanRotation, Vector3.up));
-                FireParticleSystem.Play();
+                //FireParticleSystem.Play();
                 CurrentTalisman--;
                 _ReloadingRoutine = StartCoroutine(ReloadTalisman());
             }

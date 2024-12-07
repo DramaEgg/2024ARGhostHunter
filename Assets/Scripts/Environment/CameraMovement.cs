@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     {
         startPosition = GameObject.Find("Main Camera").transform.position;
         startPosition = transform.position;
-        endPosition = startPosition + new Vector3(0, 0, 20);
+        endPosition = startPosition + new Vector3(0, 0, 10);
         rotationAxis = transform.TransformDirection(Vector3.up);
         fromRotation = GameObject.Find("Main Camera").transform.rotation;
         fromRotation = transform.rotation;
