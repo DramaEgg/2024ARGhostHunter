@@ -8,14 +8,14 @@ public class EnemyAnimator : MonoBehaviour
 
     public int isWalkingKey;
     public int isRunningKey;
-    public int isAttactKey;
+    public int isAttackKey;
 
     private void Awake()
     {
         enemyAnimator = GetComponent<Animator>();
         isWalkingKey = Animator.StringToHash("IsWalking");
         isRunningKey = Animator.StringToHash("IsRunning");
-        isAttactKey = Animator.StringToHash("IsAttack");
+        isAttackKey = Animator.StringToHash("IsAttack");
     }
 
     public void SetWalkAnimation(bool isWalking)
@@ -30,6 +30,6 @@ public class EnemyAnimator : MonoBehaviour
 
     public void SetAttackAnimation()
     {
-        enemyAnimator.SetTrigger(isAttactKey);
+        enemyAnimator.SetTrigger(isAttackKey);
     }
 }
