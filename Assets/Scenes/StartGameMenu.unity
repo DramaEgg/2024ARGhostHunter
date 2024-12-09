@@ -9089,7 +9089,6 @@ GameObject:
   - component: {fileID: 1265635887}
   - component: {fileID: 1265635886}
   - component: {fileID: 1265635885}
-  - component: {fileID: 1265635890}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Untagged
@@ -9244,19 +9243,6 @@ Transform:
   - {fileID: 1386187871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1265635890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265635884}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc93d183bf092c8429408934d0c1e3cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiButton: {fileID: 1080085175}
 --- !u!1 &1272966533
 GameObject:
   m_ObjectHideFlags: 0
@@ -12750,7 +12736,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752838689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aed62bf3ae2456c408f247f96808ce96, type: 3}
   m_Name: 
@@ -13178,7 +13164,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752838689}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caff514de9b15ad48ab85dcff5508221, type: 3}
   m_Name: 
@@ -13186,8 +13172,8 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 403584128}
-  m_ModelParent: {fileID: 1752838690}
+  m_ModelPrefab: {fileID: 0}
+  m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
