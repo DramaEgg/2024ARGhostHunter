@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7777c5fb0bb13849a609c55ce0c3215
+guid: e6a0698ab5417214090eafd98446f0fc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,9 +33,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
-      takeName: mixamo.com
-      internalID: -203655887218126122
+      name: zombie run
+      takeName: Take 001
+      internalID: 1827226128182048838
       firstFrame: 0
       lastFrame: 24
       wrapMode: 0
