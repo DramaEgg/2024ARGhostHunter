@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     public float EnemyAttackedHP;
     public float GotAttackHP;
     public bool isDead = false;
-    public GameObject LiveEnemy;
+    //public GameObject LiveEnemy;
     public GameObject[] DeadEnemy;
 
     [Header("Vision")]
