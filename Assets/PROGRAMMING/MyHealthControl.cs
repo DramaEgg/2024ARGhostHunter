@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class MyHealthControl : MonoBehaviour
 {
     [Header("Settings")]
-    public Image HPBarImage;
+    //public Image HPBarImage;
     public float CurrentHP;
     public float OriginalHP = 100f;
-    public float ImageOriginalSize;
+    //public float ImageOriginalSize;
     //public GameObject Gameover;
     //public GameObject GameoverAudio;
     //public SceneLoader CurrentSceneLoader;
@@ -17,17 +17,17 @@ public class MyHealthControl : MonoBehaviour
     void Start()
     {
         CurrentHP = OriginalHP;
-        ImageOriginalSize = HPBarImage.rectTransform.rect.width;
+        //ImageOriginalSize = HPBarImage.rectTransform.rect.width;
         //CurrentSceneLoader = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CurrentHP < OriginalHP)
-        {
-            CurrentHP++.ToString();
-        }
+        //if (CurrentHP < OriginalHP)
+        //{
+        //    CurrentHP++.ToString();
+        //}
 
         //if (CurrentHP <= 0)
         //{
@@ -43,7 +43,7 @@ public class MyHealthControl : MonoBehaviour
             StartCoroutine(loadDeadScene());
         }
         float percentage = CurrentHP / OriginalHP;
-        HPBarImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, ImageOriginalSize * percentage);
+        //HPBarImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, ImageOriginalSize * percentage);
     }
 
     IEnumerator loadDeadScene()

@@ -27,12 +27,16 @@ public class Enemy : MonoBehaviour
     public float EnemyOriginalHP = 15;
     public float EnemyAttackedHP;
     public float GotAttackHP;
+    public bool isDead = false;
+    public GameObject LiveEnemy;
+    public GameObject[] DeadEnemy;
 
     [Header("Vision")]
     public float visionDistance = 15f;
     public float visionAngel = 120;
     private bool isLast = false;
     private bool doNothing = false;
+    
 
     //[Header("Audio")]
     //public AudioSource HPDownAudioSource;
@@ -74,31 +78,47 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        Vision();
-
-        if (findPlayer)
-
+        if (!isDead)
         {
-            Chase();
+            Vision();
+            if (findPlayer)
+
+            {
+                Chase();
+            }
+            else
+            {
+                Patrol();
+            }
+
+            if (Last != null)
+            {
+                if ((transform.position - last).magnitude <= 3)
+                {
+                    isLast = true;
+                }
+            }
+
         }
         else
         {
-            Patrol();
-        }
 
-        if (Last != null)
-        {
-            if ((transform.position - last).magnitude <= 3)
-            {
-                isLast = true;
-            }
         }
 
         if (EnemyCurrentHP <= 0)
         {
-            GetComponent<Animator>().enabled = false;
+            animatorCtrl.SetRunAnimation(false);
+            animatorCtrl.SetWalkAnimation(false);
+            GetComponent<Collider>().enabled = false;
+            DeadEnemy[0].SetActive(true);
+            DeadEnemy[1].SetActive(true);
+            GetComponent<NavMeshAgent>().enabled = false;
+            isDead = true;
+            animatorCtrl.SetDeadAnimation();
+
+            //GetComponent<Animator>().enabled = false;
             //EnemyDieAudio.SetActive(true);
-            Destroy(gameObject, 2);
+            //Destroy(gameObject, 2);
             //NextEnemy.SetActive(true);
         }
         //if (EnemyCurrentHP == 0)
@@ -110,26 +130,29 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (!isDead)
         {
-            Debug.Log("Attack");
-            //HPDownAudioSource.PlayOneShot(HPDownPClip);
-            //EnemyAudioSource.PlayOneShot(EnemyAttackClip);
-            Chase();
-            Attack();
-        }
-        if (other.gameObject.CompareTag("Talisman"))
-        {
-            Debug.Log("GotAttack");
-            Chase();
-            EnemyCurrentHP--;
-        }
+            if (other.gameObject.CompareTag("Player"))
+            {
+                Debug.Log("Attack");
+                //HPDownAudioSource.PlayOneShot(HPDownPClip);
+                //EnemyAudioSource.PlayOneShot(EnemyAttackClip);
+                Chase();
+                Attack();
+            }
+            if (other.gameObject.CompareTag("Talisman"))
+            {
+                Debug.Log("GotAttack");
+                Chase();
+                EnemyCurrentHP--;
+            }
 
-        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<MyHealthControl>() != null)
-        {
-            Debug.Log("MyHp--");
-            other.gameObject.GetComponent<MyHealthControl>().CurrentHP--;
-            other.gameObject.GetComponent<MyHealthControl>().UpdateHp();
+            if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<MyHealthControl>() != null)
+            {
+                Debug.Log("MyHp--");
+                other.gameObject.GetComponent<MyHealthControl>().CurrentHP--;
+                other.gameObject.GetComponent<MyHealthControl>().UpdateHp();
+            }
         }
     }
     private void OnCollisonStay(Collision collision)
