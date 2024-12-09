@@ -10,9 +10,9 @@ public class MyHealthControl : MonoBehaviour
     public float CurrentHP;
     public float OriginalHP = 100f;
     public float ImageOriginalSize;
-    public GameObject Gameover;
-    public GameObject GameoverAudio;
-    public SceneLoader CurrentSceneLoader;
+    //public GameObject Gameover;
+    //public GameObject GameoverAudio;
+    //public SceneLoader CurrentSceneLoader;
 
     void Start()
     {
@@ -29,17 +29,17 @@ public class MyHealthControl : MonoBehaviour
             CurrentHP++.ToString();
         }
 
-        if (CurrentHP <= 0)
-        {
-            GameoverAudio.SetActive(true);
-        }
+        //if (CurrentHP <= 0)
+        //{
+        //    GameoverAudio.SetActive(true);
+        //}
     }
 
     public void UpdateHp()
     {
         if (CurrentHP <= 0)
         {
-            Gameover.SetActive(true);
+            //Gameover.SetActive(true);
             StartCoroutine(loadDeadScene());
         }
         float percentage = CurrentHP / OriginalHP;

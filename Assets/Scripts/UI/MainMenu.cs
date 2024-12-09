@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     Button MainMenuButton;
     public void OnClickLogin()
     {
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
     private void Awake()
     {
