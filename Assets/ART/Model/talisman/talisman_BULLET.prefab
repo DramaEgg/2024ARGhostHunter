@@ -96,14 +96,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3330649122283670349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 963835a0289f1d141bd94081c1389671, type: 3}
+  m_Script: {fileID: 11500000, guid: 025ff872075e1584cb6ed560dc6e901c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TalismanSpeed: 3
   lifeTime: 5
   hitLifeTime: 1
   TalismanParticleSystem: {fileID: 1048635946045522020}
-  TalismanRigidbody: {fileID: 3718471748590989170}
+  TalismanRigidbody: {fileID: 0}
 --- !u!54 &3718471748590989170
 Rigidbody:
   m_ObjectHideFlags: 0

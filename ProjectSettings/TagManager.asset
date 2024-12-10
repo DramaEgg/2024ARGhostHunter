@@ -30,6 +30,8 @@ TagManager:
   - QDSUISection
   - Enemy
   - Hand
+  - Talisman
+  - DeadEnemy
   layers:
   - Default
   - TransparentFX
