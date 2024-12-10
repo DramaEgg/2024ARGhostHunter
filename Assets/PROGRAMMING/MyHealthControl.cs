@@ -8,15 +8,18 @@ public class MyHealthControl : MonoBehaviour
     [Header("Settings")]
     //public Image HPBarImage;
     public float CurrentHP;
-    public float OriginalHP = 100f;
-    //public float ImageOriginalSize;
+    public float MaxHP = 100f;
+    public float AddHPAmount = 0.05f;
+    public GameObject LowHPFilter;
+
     //public GameObject Gameover;
     //public GameObject GameoverAudio;
     //public SceneLoader CurrentSceneLoader;
+    //public float ImageOriginalSize; //HealthBar
 
     void Start()
     {
-        CurrentHP = OriginalHP;
+        CurrentHP = MaxHP;
         //ImageOriginalSize = HPBarImage.rectTransform.rect.width;
         //CurrentSceneLoader = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
     }
@@ -24,10 +27,18 @@ public class MyHealthControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (CurrentHP < OriginalHP)
-        //{
-        //    CurrentHP++.ToString();
-        //}
+        if (CurrentHP < MaxHP)
+        {
+            StartCoroutine(AddHP());
+        }
+        if (CurrentHP < 30)
+        {
+            LowHPFilter.SetActive(true);
+        }        
+        if (CurrentHP > 30)
+        {
+            LowHPFilter.SetActive(false);
+        }
 
         //if (CurrentHP <= 0)
         //{
@@ -42,10 +53,15 @@ public class MyHealthControl : MonoBehaviour
             //Gameover.SetActive(true);
             StartCoroutine(loadDeadScene());
         }
-        float percentage = CurrentHP / OriginalHP;
+        //float percentage = CurrentHP / MaxHP;
         //HPBarImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, ImageOriginalSize * percentage);
     }
 
+    IEnumerator AddHP()
+    {
+        CurrentHP = Mathf.Min(CurrentHP + AddHPAmount,MaxHP);
+        yield return new WaitForSeconds(2);
+    }
     IEnumerator loadDeadScene()
     {
         Time.timeScale = 0.0f;
