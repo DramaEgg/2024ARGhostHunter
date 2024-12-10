@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu1 : MonoBehaviour
 {
     public GameObject ResumeButton;
     public GameObject MainMenuButton;
     public GameObject QuitButton;
+    public GameObject Controller;
     bool isPause = false;
 
     void Start()
@@ -14,6 +15,7 @@ public class PauseMenu : MonoBehaviour
         QuitButton.SetActive(false);
         ResumeButton.SetActive(false);
         MainMenuButton.SetActive(false);
+        Controller.SetActive(false);
     }
     public void ResumeEvent()
     {
@@ -36,6 +38,7 @@ public class PauseMenu : MonoBehaviour
             QuitButton.SetActive(true);
             ResumeButton.SetActive(true);
             MainMenuButton.SetActive(true);
+            Controller.SetActive(true);
             Time.timeScale = 0.0f;
         }
 
