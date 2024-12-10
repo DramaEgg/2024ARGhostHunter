@@ -160,8 +160,8 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<MyHealthControl>() != null)
         {
             Debug.Log("MyHpDown");
-            collision.gameObject.GetComponent<PlayerHealthControl>().CurrentHP--;
-            collision.gameObject.GetComponent<PlayerHealthControl>().UpdateHp();
+            collision.gameObject.GetComponent<MyHealthControl>().CurrentHP--;
+            collision.gameObject.GetComponent<MyHealthControl>().UpdateHp();
         }
     }
 
