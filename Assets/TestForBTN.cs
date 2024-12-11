@@ -13,11 +13,12 @@ public class TestForBTN : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 
     public void OnButtonClick()
     {
         Debug.Log("Button Clicked!");
     }
+
 }

@@ -5,6 +5,33 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ghost
+  - QDSUIToggleButton
+  - QDSUIIcon
+  - QDSUITextSecondaryColor
+  - Bullet
+  - QDSUIPrimaryButton
+  - QDSUISharedThemeColor
+  - QDSUIAccentColor
+  - QDSUISecondaryButton
+  - QDSUIDestructiveButton
+  - QDSUIBorderlessButton
+  - QDSUIToggleBorderlessButton
+  - QDSUITooltip
+  - QDSUIToggleSwitch
+  - Locomotion
+  - LocoButton
+  - LocoText
+  - PassThroughButton
+  - PassThrough
+  - QDSUITextInputField
+  - SamplesInfoPanel
+  - Supplies
+  - QDSUIToggleCheckboxRadio
+  - QDSUISection
+  - Enemy
+  - Hand
+  - Talisman
+  - DeadEnemy
   layers:
   - Default
   - TransparentFX

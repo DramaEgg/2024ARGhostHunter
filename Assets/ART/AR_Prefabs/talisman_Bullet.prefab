@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: talisman_Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d49f0467406bb9c48a0a61e9fcde8e69, type: 3}
+      propertyPath: m_TagString
+      value: Talisman
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
