@@ -23,7 +23,7 @@ public class TalismanCtrl : MonoBehaviour
             Debug.Log("Grabbed");
             isGrabbed = true;
             linkObject.gameObject.GetComponent<Shooting>().CurrentTalisman ++;
-            Destroy(gameObject,3);
+            Destroy(gameObject,15);
         }
     }
     void Start()
