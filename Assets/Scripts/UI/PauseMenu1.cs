@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static OVRInput;
 
 public class PauseMenu1 : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PauseMenu1 : MonoBehaviour
     public GameObject MainMenuButton;
     public GameObject QuitButton;
     public GameObject Controller;
+    public RawButton toggleKey; // Ä¬ÈÏ°´¼üÎªEsc
     bool isPause = false;
 
     void Start()
@@ -31,7 +33,7 @@ public class PauseMenu1 : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPause)
+        if (OVRInput.GetDown(toggleKey) && !isPause)
 
         {
             isPause = true;
@@ -42,7 +44,7 @@ public class PauseMenu1 : MonoBehaviour
             Time.timeScale = 0.0f;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Escape)&& isPause)
+        else if (OVRInput.GetDown(toggleKey) && isPause)
         { 
             ResumeEvent(); 
         } 
