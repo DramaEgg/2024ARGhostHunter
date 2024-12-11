@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ART/Model/coffin/coffin.fbm/coffin_aiStandardSurface4_Metallic.png.meta
 guid: 9afb56d1e51648b4ca6bd376fa946918
+========
+guid: ed6d45abf1e30cc4196ac5917decd35f
+>>>>>>>> DESIGN:Assets/DESIGN/UI/UIcollection/UIcollection/Tietu1.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

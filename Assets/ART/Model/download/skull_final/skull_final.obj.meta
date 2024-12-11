@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ART/Model/download/skull_final/skull_final.obj.meta
 guid: b27ff6dbccffe2d4b9d2f72477fd35da
+========
+guid: a129e326a27917e46883c1929b519f22
+>>>>>>>> DESIGN:Assets/ART/Model/zombie/zombie/zombie.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

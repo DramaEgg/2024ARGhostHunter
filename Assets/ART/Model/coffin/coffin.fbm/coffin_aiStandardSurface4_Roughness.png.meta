@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ART/Model/coffin/coffin.fbm/coffin_aiStandardSurface4_Roughness.png.meta
 guid: d061c37c8d538ba408a3acd497dbf0b4
+========
+guid: 898b9ab5c4c0e53469bab09933293442
+>>>>>>>> DESIGN:Assets/DESIGN/UI/UIcollection/UIcollection/GameOver.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

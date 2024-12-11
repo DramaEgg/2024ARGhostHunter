@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ART/Model/Leg.meta
 guid: ec2d8d163977a9947a8323e1cccedeef
+========
+guid: 1511543cde18948488cc90cb16a83535
+>>>>>>>> DESIGN:Assets/ART/Metarial.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

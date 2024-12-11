@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ART/Model/coffin/coffin.fbm/coffin_aiStandardSurface4_BaseColor.png.meta
 guid: 19b04dfe1d27e844b8634bf4e9ffad7d
+========
+guid: fece614f8c114a7488495d694018ebdd
+>>>>>>>> DESIGN:Assets/DESIGN/UI/UIcollection/UIcollection/Huangfu1205.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

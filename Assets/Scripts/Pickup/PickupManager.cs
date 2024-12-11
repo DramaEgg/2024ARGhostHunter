@@ -19,12 +19,12 @@ public class PickupManager : MonoBehaviour
 
     public WeaponInventory weaponInventory;
     public Packs Packs;
-    public Key Key;
-    public DoorTrigger DoorTrigger;
+    //public Key Key;
+    //public DoorTrigger DoorTrigger;
 
-    [Header("Door Related (new)")]
-    public RotateDoor2 CurrentDoor;
-    public List<DoorKey.KeyType> KeyList = new List<DoorKey.KeyType>();
+    //[Header("Door Related (new)")]
+    //public RotateDoor2 CurrentDoor;
+    //public List<DoorKey.KeyType> KeyList = new List<DoorKey.KeyType>();
 
     // Start is called before the first frame update
     void Start()
@@ -42,43 +42,43 @@ public class PickupManager : MonoBehaviour
         Debug.DrawRay(PickupRay.origin, PickupRay.direction * PickupRange, Color.blue);
         PickupItem(CurrentMask);
         
-        if (PlayerInputHandler.Instance.GetDoorOpenInput())
-        {
-            if (Physics.Raycast(PickupRay, out hitInfo, PickupRange))
-            {
-                if(hitInfo.collider.gameObject.tag == "Door")
-                {
-                    CurrentDoor = hitInfo.collider.gameObject.GetComponent<RotateDoor2>();
-                    if (ContainsKey(CurrentDoor.NeedKeyType) == true || CurrentDoor.NeedKeyType == DoorKey.KeyType.None)
-                    {
-                        if (CurrentDoor.openState == RotateDoor2.OpenState.Close)
-                        {
-                            if (CurrentDoor.IsDoorOutside)
-                            {
-                                CurrentDoor.openState = RotateDoor2.OpenState.OpenIn;
-                                CurrentDoor.IsDoorOpen = true;
-                            }
-                            else
-                            {
-                                CurrentDoor.openState = RotateDoor2.OpenState.OpenOut;
-                                CurrentDoor.IsDoorOpen = true;
-                            }
-                            //CurrentDoor.PlayDoorAudio();
-                            RemoveKey(CurrentDoor.NeedKeyType);
-                            isHoldingKey = false;
-                        }
-                        else
-                        {
-                            CurrentDoor.openState = RotateDoor2.OpenState.Close;
-                            CurrentDoor.IsDoorOpen = false;
-                            //CurrentDoor.PlayDoorAudio();
-                        }
-                    }
-                }
+        //if (PlayerInputHandler.Instance.GetDoorOpenInput())
+        //{
+        //    if (Physics.Raycast(PickupRay, out hitInfo, PickupRange))
+        //    {
+        //        if(hitInfo.collider.gameObject.tag == "Door")
+        //        {
+        //            CurrentDoor = hitInfo.collider.gameObject.GetComponent<RotateDoor2>();
+        //            if (ContainsKey(CurrentDoor.NeedKeyType) == true || CurrentDoor.NeedKeyType == DoorKey.KeyType.None)
+        //            {
+        //                if (CurrentDoor.openState == RotateDoor2.OpenState.Close)
+        //                {
+        //                    if (CurrentDoor.IsDoorOutside)
+        //                    {
+        //                        CurrentDoor.openState = RotateDoor2.OpenState.OpenIn;
+        //                        CurrentDoor.IsDoorOpen = true;
+        //                    }
+        //                    else
+        //                    {
+        //                        CurrentDoor.openState = RotateDoor2.OpenState.OpenOut;
+        //                        CurrentDoor.IsDoorOpen = true;
+        //                    }
+        //                    //CurrentDoor.PlayDoorAudio();
+        //                    RemoveKey(CurrentDoor.NeedKeyType);
+        //                    isHoldingKey = false;
+        //                }
+        //                else
+        //                {
+        //                    CurrentDoor.openState = RotateDoor2.OpenState.Close;
+        //                    CurrentDoor.IsDoorOpen = false;
+        //                    //CurrentDoor.PlayDoorAudio();
+        //                }
+        //            }
+        //        }
 
-            }
+        //    }
 
-        }
+        //}
     }
 
     public void PickupItem(LayerMask inputLayer)
@@ -100,18 +100,18 @@ public class PickupManager : MonoBehaviour
                         //playerHUD.UpdateWeaponInfo(tempItem.Icon, tempItem.ItemName, (tempItem as SOWeapon).AmmoNum, (tempItem as SOWeapon).AmmoMax);
                         Destroy(hitInfo.collider.gameObject);
                         break;
-                    case SOItem.ItemType.Key:
-                        //if (!SOItems.Contains(tempItem))
-                        //{
-                        //    SOItems.Add(tempItem);
-                        //}
-                        //Debug.Log("Player got a key and the name is: " + tempItem.ItemName);
-                        isHoldingKey = true;
-                        //Packs.AddKey();
-                        AddKey(hitInfo.collider.gameObject.GetComponent<DoorKey>().DoorKeyType);
-                        GetComponent<PlayerHUD>().UpdateSpriteColor(hitInfo.collider.gameObject.GetComponent<DoorKey>().KeyColor);
-                        Destroy(hitInfo.collider.gameObject);
-                        break;
+                    //case SOItem.ItemType.Key:
+                    //    //if (!SOItems.Contains(tempItem))
+                    //    //{
+                    //    //    SOItems.Add(tempItem);
+                    //    //}
+                    //    //Debug.Log("Player got a key and the name is: " + tempItem.ItemName);
+                    //    isHoldingKey = true;
+                    //    //Packs.AddKey();
+                    //    AddKey(hitInfo.collider.gameObject.GetComponent<DoorKey>().DoorKeyType);
+                    //    GetComponent<PlayerHUD>().UpdateSpriteColor(hitInfo.collider.gameObject.GetComponent<DoorKey>().KeyColor);
+                    //    Destroy(hitInfo.collider.gameObject);
+                    //    break;
                     case SOItem.ItemType.HealthPack:
                         if(!SOItems.Contains(tempItem))
                         {
@@ -152,23 +152,23 @@ public class PickupManager : MonoBehaviour
         return false;
     }
 
-    public void AddKey(DoorKey.KeyType inputKey)
-    {
-        KeyList.Add(inputKey);
-        KeyUI[0].SetActive(true);
-        KeyUI[1].SetActive(true);
-    }
+    //public void AddKey(DoorKey.KeyType inputKey)
+    //{
+    //    KeyList.Add(inputKey);
+    //    KeyUI[0].SetActive(true);
+    //    KeyUI[1].SetActive(true);
+    //}
 
-    public void RemoveKey(DoorKey.KeyType inputKey)
-    {
-        KeyList.Remove(inputKey);
-        KeyUI[0].SetActive(false);
-        KeyUI[1].SetActive(false);
-    }
+    //public void RemoveKey(DoorKey.KeyType inputKey)
+    //{
+    //    KeyList.Remove(inputKey);
+    //    KeyUI[0].SetActive(false);
+    //    KeyUI[1].SetActive(false);
+    //}
 
-    public bool ContainsKey(DoorKey.KeyType inputKey)
-    {
-        return KeyList.Contains(inputKey);
-    }
+    //public bool ContainsKey(DoorKey.KeyType inputKey)
+    //{
+    //    return KeyList.Contains(inputKey);
+    //}
 
 }
