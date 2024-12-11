@@ -4550,6 +4550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: burner
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 28e37eec681d94a4ab433a4e28368112, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: 28e37eec681d94a4ab433a4e28368112, type: 3}
@@ -18314,6 +18318,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 433929251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1076794305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 510341224208256818, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+  m_PrefabInstance: {fileID: 1254498487600413791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1076794312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076794305}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b18ff0f1872cb344afcaee5a7265580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enumy: {fileID: 1076794305}
+  Player: {fileID: 0}
+  agent: {fileID: 0}
+  playerPos: {fileID: 0}
+  EnemyEyePos: {fileID: 0}
+  animatorCtrl: {fileID: 0}
+  waypoints: []
+  index: 0
+  EnemyCurrentHP: 0
+  EnemyOriginalHP: 15
+  EnemyAttackedHP: 0
+  GotAttackHP: 0
+  isDead: 0
+  DeadEnemy: []
+  visionDistance: 15
+  visionAngel: 120
+  findPlayer: 0
+  IsHit: 0
 --- !u!1 &1078419894
 GameObject:
   m_ObjectHideFlags: 0
@@ -19588,7 +19627,7 @@ GameObject:
   - component: {fileID: 1174623555}
   - component: {fileID: 1174623554}
   m_Layer: 0
-  m_Name: WhiteHouse
+  m_Name: WhiteHouseZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22726,7 +22765,7 @@ GameObject:
   - component: {fileID: 1373466907}
   - component: {fileID: 1373466906}
   m_Layer: 0
-  m_Name: Qiu
+  m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24518,8 +24557,8 @@ Transform:
   m_GameObject: {fileID: 1458537028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 0.058072, z: 10}
+  m_LocalPosition: {x: 1, y: -0, z: 2}
+  m_LocalScale: {x: 15, y: 0.058072, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1212975446}
@@ -31561,6 +31600,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 210321087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1904237348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1904237350}
+  - component: {fileID: 1904237349}
+  m_Layer: 0
+  m_Name: GourdSpawnGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1904237349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904237348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b464f3a01d54e41b91e1b255d8b7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 510341224208256818, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+  spawnArea: {fileID: 1904237350}
+  spawnRadius: 7.2
+  maxMonsters: 3
+  spawnInterval: 5
+  spawnTime: 3
+--- !u!4 &1904237350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904237348}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.37, y: 0, z: 2.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906443555
 GameObject:
   m_ObjectHideFlags: 0
@@ -34944,7 +35033,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 510341224208256818, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
       propertyPath: m_Name
-      value: GourdSlime_WithFounction
+      value: GourdSlime_Big
+      objectReference: {fileID: 0}
+    - target: {fileID: 510341224208256818, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 891369743781172616, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 891369743781172616, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 891369743781172616, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 891369743781172616, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34991,9 +35096,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 548098615}
     - target: {fileID: 8177013960536814027, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177013960536814027, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1363237020}
+    - target: {fileID: 8177013960536814027, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      propertyPath: animatorCtrl
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177013960536814027, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8177013960536814027, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -35013,7 +35130,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 510341224208256818, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1076794312}
   m_SourcePrefab: {fileID: 100100000, guid: 39fe0c53285533d4d9f5d036e5ec9229, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -35032,3 +35152,4 @@ SceneRoots:
   - {fileID: 279275424}
   - {fileID: 1373466909}
   - {fileID: 50951103}
+  - {fileID: 1904237350}

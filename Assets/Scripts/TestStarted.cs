@@ -26,6 +26,8 @@ public class TestStarted : MonoBehaviour
     public Vector3 CollapseHelpPanelPos;
     //public Vector3 DeadpseHelpPanelPos;
 
+    
+
 
     private void Start()
     {
