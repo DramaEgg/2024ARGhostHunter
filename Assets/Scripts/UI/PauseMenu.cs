@@ -9,6 +9,7 @@ public class PauseMenu1 : MonoBehaviour
     public GameObject MainMenuButton;
     public GameObject QuitButton;
     public GameObject Controller;
+    public GameObject PausePanel;
     public RawButton toggleKey; // Ä¬ÈÏ°´¼üÎªEsc
     bool isPause = false;
 
@@ -18,6 +19,7 @@ public class PauseMenu1 : MonoBehaviour
         ResumeButton.SetActive(false);
         MainMenuButton.SetActive(false);
         Controller.SetActive(false);
+        PausePanel.SetActive(false);
     }
     public void ResumeEvent()
     {
@@ -25,6 +27,7 @@ public class PauseMenu1 : MonoBehaviour
         QuitButton.SetActive(false);
         ResumeButton.SetActive(false);
         MainMenuButton.SetActive(false);
+        PausePanel.SetActive(false);
         Time.timeScale = 1.0f;
     }
     public void QuitEvent()
@@ -41,6 +44,7 @@ public class PauseMenu1 : MonoBehaviour
             ResumeButton.SetActive(true);
             MainMenuButton.SetActive(true);
             Controller.SetActive(true);
+            PausePanel.SetActive(true);
             Time.timeScale = 0.0f;
         }
 
