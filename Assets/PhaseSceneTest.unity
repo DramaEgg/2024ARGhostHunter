@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32
 --- !u!114 &40370700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,7 +1168,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1363237021}
-  m_PlaneDistance: 44.5
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -6466,7 +6466,7 @@ GameObject:
   - component: {fileID: 454444074}
   - component: {fileID: 454444073}
   - component: {fileID: 454444072}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[BuildingBlock] Passthrough'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6486,8 +6486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectionSurfaceType: 0
-  overlayType: 1
-  compositionDepth: 0
+  overlayType: 2
+  compositionDepth: -19
   hidden: 0
   overridePerLayerColorScaleAndOffset: 0
   colorScale: {x: 1, y: 1, z: 1, w: 1}
@@ -6535,7 +6535,7 @@ MonoBehaviour:
   _lutWeight: 1
   _flipLutY: 1
   serializedSurfaceGeometry: []
-  textureOpacity_: 1
+  textureOpacity_: 0
   edgeRenderingEnabled_: 0
   edgeColor_: {r: 1, g: 1, b: 1, a: 1}
   colorMapType: 0
@@ -8848,7 +8848,7 @@ Transform:
   m_GameObject: {fileID: 632358043}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
