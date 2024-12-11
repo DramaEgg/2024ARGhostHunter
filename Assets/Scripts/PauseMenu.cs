@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static OVRInput;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu; // 关联PauseMenu对象
-    public KeyCode toggleKey = KeyCode.Escape; // 默认按键为Esc
+    public RawButton toggleKey; // 默认按键为Esc
 
     private bool isPaused = false; // 初始状态未暂停
 
@@ -15,7 +16,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey))
+        if (OVRInput.GetDown(toggleKey))
         {
             TogglePauseMenu(); // 检测按键并切换PauseMenu
         }
