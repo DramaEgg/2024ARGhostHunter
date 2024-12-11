@@ -39,8 +39,8 @@ TagManager:
   - 
   - Water
   - UI
-  - GameObject
-  - PassThrough
+  - 
+  - 
   - 
   - 
   - 
@@ -66,15 +66,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Ui
-    uniqueID: 3116188409
-    locked: 0
-  - name: New Layer 2
-    uniqueID: 3089454791
-    locked: 0
-  - name: New Layer 3
-    uniqueID: 4017644859
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

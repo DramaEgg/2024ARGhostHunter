@@ -17,7 +17,6 @@ public class GourdControl : MonoBehaviour
     [Header("Patrol")]
     public Transform[] waypoints;
     public int index;
-    public float randomRadius = 5f;
 
 
     [Header("Vision")]
@@ -58,8 +57,6 @@ public class GourdControl : MonoBehaviour
 
     void Start()
     {
-        Player = GameObject.FindWithTag("Player");
-        playerPos = Player.transform;
         //animatorCtrl = GetComponent<EnemyAnimator>();
         EnemyCurrentHP = EnemyOriginalHP;
     }
@@ -209,30 +206,14 @@ public class GourdControl : MonoBehaviour
             if (index > waypoints.Length - 1)
                 index = 0;
 
-            Vector3 randomPoint = RandomNavMeshPoint();
-            GetComponent<NavMeshAgent>().destination = randomPoint;
-
-            //GetComponent<NavMeshAgent>().destination = waypoints[index].position;
+            GetComponent<NavMeshAgent>().destination = waypoints[index].position;
             //animatorCtrl.SetWalkAnimation(true);
-            // animatorCtrl.SetRunAnimation(false);
+           // animatorCtrl.SetRunAnimation(false);
         }
 
     }
 
-    
 
-    private Vector3 RandomNavMeshPoint()
-    {
-        
-        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * randomRadius;
-        randomDirection += transform.position;
-        randomDirection.y = transform.position.y;
 
-        if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, randomRadius, NavMesh.AllAreas))
-        {
-            return hit.position;
-        }
 
-        return waypoints[index].position;
-    }
 }

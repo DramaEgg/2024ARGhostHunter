@@ -3,19 +3,7 @@ guid: 8b18ff0f1872cb344afcaee5a7265580
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - Enumy: {instanceID: 0}
-  - Player: {instanceID: 0}
-  - agent: {instanceID: 0}
-  - playerPos: {instanceID: 0}
-  - EnemyEyePos: {instanceID: 0}
-  - animatorCtrl: {instanceID: 0}
-  - HPDownAudioSource: {instanceID: 0}
-  - HPDownPClip: {instanceID: 0}
-  - EnemyAudioSource: {instanceID: 0}
-  - EnemyAttackClip: {fileID: 8300000, guid: 5a4bd3e4a9b96f8408143c826e8b29ca, type: 3}
-  - EnemyDieAudio: {instanceID: 0}
-  - EnemyChaceAudio: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -36,15 +36,15 @@ public class Enemy : MonoBehaviour
     public float visionAngel = 120;
     private bool isLast = false;
     private bool doNothing = false;
+    
 
-
-    [Header("Audio")]
-    public AudioSource HPDownAudioSource;
-    public AudioClip HPDownPClip;
-    public AudioSource EnemyAudioSource;
-    public AudioClip EnemyAttackClip;
-    public GameObject EnemyDieAudio;
-    public GameObject EnemyChaceAudio;
+    //[Header("Audio")]
+    //public AudioSource HPDownAudioSource;
+    //public AudioClip HPDownPClip;
+    //public AudioSource EnemyAudioSource;
+    //public AudioClip EnemyAttackClip;
+    //public GameObject EnemyDieAudio;
+    //public GameObject EnemyChaceAudio;
 
     private Vector3 last;
     public Vector3 Last
@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
             animatorCtrl.SetDeadAnimation();
 
             //GetComponent<Animator>().enabled = false;
-            EnemyDieAudio.SetActive(true);
+            //EnemyDieAudio.SetActive(true);
             //Destroy(gameObject, 2);
             //NextEnemy.SetActive(true);
         }
@@ -135,8 +135,8 @@ public class Enemy : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 Debug.Log("Attack");
-                HPDownAudioSource.PlayOneShot(HPDownPClip);
-                EnemyAudioSource.PlayOneShot(EnemyAttackClip);
+                //HPDownAudioSource.PlayOneShot(HPDownPClip);
+                //EnemyAudioSource.PlayOneShot(EnemyAttackClip);
                 Chase();
                 Attack();
             }
@@ -228,7 +228,7 @@ public class Enemy : MonoBehaviour
     }
     private void Chase()
     {
-        EnemyChaceAudio.SetActive(true);
+        //EnemyChaceAudio.SetActive(true);
         animatorCtrl.SetWalkAnimation(false);
         animatorCtrl.SetRunAnimation(true);
         GetComponent<NavMeshAgent>().speed = 6;
