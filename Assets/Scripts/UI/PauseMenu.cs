@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static OVRInput;
 
-public class PauseMenu1 : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     public GameObject ResumeButton;
     public GameObject MainMenuButton;
     public GameObject QuitButton;
-    public GameObject Controller;
-    public GameObject PausePanel;
-    public RawButton toggleKey; // Ä¬ÈÏ°´¼üÎªEsc
     bool isPause = false;
 
     void Start()
@@ -18,8 +14,6 @@ public class PauseMenu1 : MonoBehaviour
         QuitButton.SetActive(false);
         ResumeButton.SetActive(false);
         MainMenuButton.SetActive(false);
-        Controller.SetActive(false);
-        PausePanel.SetActive(false);
     }
     public void ResumeEvent()
     {
@@ -27,7 +21,6 @@ public class PauseMenu1 : MonoBehaviour
         QuitButton.SetActive(false);
         ResumeButton.SetActive(false);
         MainMenuButton.SetActive(false);
-        PausePanel.SetActive(false);
         Time.timeScale = 1.0f;
     }
     public void QuitEvent()
@@ -36,19 +29,17 @@ public class PauseMenu1 : MonoBehaviour
     }
     void Update()
     {
-        if (OVRInput.GetDown(toggleKey) && !isPause)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPause)
 
         {
             isPause = true;
             QuitButton.SetActive(true);
             ResumeButton.SetActive(true);
             MainMenuButton.SetActive(true);
-            Controller.SetActive(true);
-            PausePanel.SetActive(true);
             Time.timeScale = 0.0f;
         }
 
-        else if (OVRInput.GetDown(toggleKey) && isPause)
+        else if (Input.GetKeyDown(KeyCode.Escape)&& isPause)
         { 
             ResumeEvent(); 
         } 
