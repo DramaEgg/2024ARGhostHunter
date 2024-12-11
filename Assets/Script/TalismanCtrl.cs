@@ -13,7 +13,7 @@ public class TalismanCtrl : MonoBehaviour
 
     [Header("UIIcon")]
     public GameObject[] TalismanUI;
-    public GameObject[] GhostUI;
+    //public GameObject[] GhostUI;
     public TextMeshProUGUI TalismanNum;
 
     private void OnCollisionEnter(Collision collision)
@@ -22,8 +22,8 @@ public class TalismanCtrl : MonoBehaviour
         {
             Debug.Log("Grabbed");
             isGrabbed = true;
-            linkObject.gameObject.GetComponent<Shooting>().CurrentTalisman ++;
-            Destroy(gameObject,3);
+            linkObject.gameObject.GetComponent<Shooting>().CurrentTalisman++;
+            Destroy(gameObject,15);
         }
     }
     void Start()

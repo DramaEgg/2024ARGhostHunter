@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 6142951977623129141}
   - component: {fileID: 4226221322606751676}
   - component: {fileID: 1192982665605387881}
-  - component: {fileID: 7520165721960905113}
-  - component: {fileID: -326716101904397721}
   - component: {fileID: 1151648657593437458}
+  - component: {fileID: 7520165721960905113}
   - component: {fileID: 4201250114041487577}
   - component: {fileID: 6989205819560961465}
+  - component: {fileID: -326716101904397721}
   m_Layer: 0
   m_Name: '[BuildingBlock] Talisman'
   m_TagString: Untagged
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: bacfe9d4-475f-4531-902e-7b64e62c3e7d
+  instanceId: 5443e093-e676-436c-9768-827bc7fd5971
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -108,39 +108,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7520165721960905113
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772974206288246174}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-326716101904397721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772974206288246174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 846e70a39b7eedd4d8858a28af90660e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1151648657593437458
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,6 +135,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &7520165721960905113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772974206288246174}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!64 &4201250114041487577
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -206,8 +194,19 @@ MonoBehaviour:
   linkObject: {fileID: 3510371951860219221, guid: 3c69e37bbb947db44bb5cedc1ce04f6a, type: 3}
   TargetTalisman: 0
   TalismanUI: []
-  GhostUI: []
   TalismanNum: {fileID: 3960599077436423863, guid: 670e4de9ab203504bbd0e1365e852fb9, type: 3}
+--- !u!114 &-326716101904397721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772974206288246174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846e70a39b7eedd4d8858a28af90660e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5596523221462690995
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: ee071333-9fef-4943-84a9-51b0a89ae629
+  instanceId: 0fe24729-eb76-4c1e-a43e-6ee574f1e94b
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
